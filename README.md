@@ -3,7 +3,7 @@
 ### FILE SYSTEM IFRASTRUCTURE (AWS S3 PRESIGNED URL) 📁
 
 [Check my blog about different file upload solutions](https://iammo69.web.app/file-upload-solutions.html)
-![AWS S3 Presigned URL System](https://raw.githubusercontent.com/Mohamed475/unista-app/main/server/infrastructure/image-upload-s3-solution.png?token=GHSAT0AAAAAACAKQQZSEIY34FIQCFXVAI72ZBUZRRA)
+![AWS S3 Presigned URL System](https://i.imgur.com/RDysto9.png)
 
 ### SECURITY 🔐
 
@@ -483,22 +483,22 @@ _API-Endpoint Routes_: **157**
   ```js
   let headersList = {
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     username: 'mohamed475',
     password: 'hodla475',
     role: 'master',
-  })
+  });
 
   let response = await fetch('http://localhost:3000/api/v1/auth/login', {
     method: 'POST',
     body: bodyContent,
     headers: headersList,
-  })
+  });
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 #### MASTER 🔑
@@ -549,7 +549,7 @@ _API-Endpoint Routes_: **157**
   let headersList = {
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MjkwOTYsImV4cCI6MTY4MzMyMTA5Nn0.I1OSJJ3RywdmodyvYvRu2bN-2tEwPWbEEyceFCYmTS0',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities',
@@ -557,10 +557,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Create university 📌
@@ -598,13 +598,13 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MjkwOTYsImV4cCI6MTY4MzMyMTA5Nn0.I1OSJJ3RywdmodyvYvRu2bN-2tEwPWbEEyceFCYmTS0',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'ALU',
     city: 'Alexandria',
     country: 'Egypt',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities',
@@ -613,10 +613,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show university 📌
@@ -651,7 +651,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MjkwOTYsImV4cCI6MTY4MzMyMTA5Nn0.I1OSJJ3RywdmodyvYvRu2bN-2tEwPWbEEyceFCYmTS0',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16',
@@ -659,10 +659,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update university 📌
@@ -707,13 +707,13 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MjkwOTYsImV4cCI6MTY4MzMyMTA5Nn0.I1OSJJ3RywdmodyvYvRu2bN-2tEwPWbEEyceFCYmTS0',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'alu',
     city: 'Alex',
     country: 'Egypt',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16',
@@ -722,10 +722,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete university 📌
@@ -751,7 +751,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MjkwOTYsImV4cCI6MTY4MzMyMTA5Nn0.I1OSJJ3RywdmodyvYvRu2bN-2tEwPWbEEyceFCYmTS0',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642df520c6fee003857cde93',
@@ -759,10 +759,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### COLLAGE TYPE ⭐
@@ -802,11 +802,11 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MjkwOTYsImV4cCI6MTY4MzMyMTA5Nn0.I1OSJJ3RywdmodyvYvRu2bN-2tEwPWbEEyceFCYmTS0',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'engineering',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/collage-types',
@@ -815,9 +815,9 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
-  let data = await response.text()
-  console.log(data)
+  );
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index collage types 📌
@@ -859,7 +859,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MjkwOTYsImV4cCI6MTY4MzMyMTA5Nn0.I1OSJJ3RywdmodyvYvRu2bN-2tEwPWbEEyceFCYmTS0',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/collage-types',
@@ -867,10 +867,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show collage type 📌
@@ -904,7 +904,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MjkwOTYsImV4cCI6MTY4MzMyMTA5Nn0.I1OSJJ3RywdmodyvYvRu2bN-2tEwPWbEEyceFCYmTS0',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/collage-types/642debc776e91123782b7f38',
@@ -912,10 +912,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update collage type 📌
@@ -957,11 +957,11 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MjkwOTYsImV4cCI6MTY4MzMyMTA5Nn0.I1OSJJ3RywdmodyvYvRu2bN-2tEwPWbEEyceFCYmTS0',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'testf',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/collage-types/642e33a399182e5e2d14ec47',
@@ -970,10 +970,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete collage type 📌
@@ -999,7 +999,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MjkwOTYsImV4cCI6MTY4MzMyMTA5Nn0.I1OSJJ3RywdmodyvYvRu2bN-2tEwPWbEEyceFCYmTS0',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/collage-types/642e33a399182e5e2d14ec47',
@@ -1007,10 +1007,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### Collages ⭐
@@ -1061,12 +1061,12 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'fuculty of engineering',
     type: '642debc776e91123782b7f38',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages',
@@ -1075,10 +1075,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index collages 📌
@@ -1152,7 +1152,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages',
@@ -1160,10 +1160,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show collage 📌
@@ -1211,7 +1211,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642deda276e91123782b7f94',
@@ -1219,10 +1219,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update collage 📌
@@ -1271,12 +1271,12 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'fuculty of computer & information',
     type: '642deb9c76e91123782b7f35',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642deda276e91123782b7f94',
@@ -1285,10 +1285,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete collage 📌
@@ -1314,7 +1314,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642deda276e91123782b7f94',
@@ -1322,10 +1322,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### LEVEL ⭐
@@ -1365,11 +1365,11 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'level 01',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels',
@@ -1378,10 +1378,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index levels 📌
@@ -1431,7 +1431,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels',
@@ -1439,10 +1439,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show level 📌
@@ -1486,7 +1486,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f',
@@ -1494,10 +1494,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update level 📌
@@ -1544,11 +1544,11 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'updated level',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642eea412a5ae844ca7b8f6f',
@@ -1557,10 +1557,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete level 📌
@@ -1586,7 +1586,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642eea412a5ae844ca7b8f6f',
@@ -1594,10 +1594,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### ADMIN ⭐
@@ -1652,14 +1652,14 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'admin 02',
     email: 'adminf02@mail.com',
     password: 'adminpassword',
     username: 'unfi-admin-02f',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/admins',
@@ -1668,10 +1668,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index admins 📌
@@ -1723,7 +1723,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/admins',
@@ -1731,10 +1731,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show admin 📌
@@ -1781,7 +1781,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/admins/642eed3c977ee3f83d97f332',
@@ -1789,10 +1789,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update admin 📌
@@ -1839,12 +1839,12 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'admooosna-MASTER',
     email: 'dsf@gmail.com',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/admins/642eed3c977ee3f83d97f332',
@@ -1853,10 +1853,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete admin 📌
@@ -1882,7 +1882,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/admins/642eed3c977ee3f83d97f332',
@@ -1890,10 +1890,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### PROFESSOR ⭐
@@ -1934,14 +1934,14 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Mohamed Yasser',
     password: 'ljslk',
     username: 'mov47f5',
     academicId: '120120120120',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/professors',
@@ -1950,10 +1950,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index professors 📌
@@ -1998,7 +1998,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/professors',
@@ -2006,10 +2006,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show professor 📌
@@ -2054,7 +2054,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/professors/64304c1b3eea93f118839bff',
@@ -2062,10 +2062,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update professor 📌
@@ -2104,12 +2104,12 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'ali ali',
     academicId: '99999999999',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/professors/64304c1b3eea93f118839bff',
@@ -2118,10 +2118,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete professor 📌
@@ -2147,7 +2147,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQyZGUzZjQ4ZmNkMDgyMzlmNTVmNjlhIiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2ODA3MzEyMjYsImV4cCI6MTY4MzMyMzIyNn0.WvDflGIDlExCao6mXYFjpEuD4dKpcfVd6sGxMeMo8F8',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/master/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/professors/64304c1b3eea93f118839bff',
@@ -2155,10 +2155,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 #### ADMIN 👔
@@ -2213,13 +2213,13 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'private',
     tuitionFees: '1000',
     currency: 'EGP',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs',
@@ -2228,10 +2228,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index programs 📌
@@ -2289,7 +2289,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs',
@@ -2297,10 +2297,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show program 📌
@@ -2358,7 +2358,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46',
@@ -2366,10 +2366,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update program 📌
@@ -2414,13 +2414,13 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'public',
     tuitionFees: '900',
     currency: 'USD',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052c63eea93f118839c53',
@@ -2429,10 +2429,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete program 📌
@@ -2458,7 +2458,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052c63eea93f118839c53',
@@ -2466,10 +2466,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 - `POST - api/v1/admin/universities/:id/collages/:id/levels/:id/programs/:id/departments` - Create [Details](#create-department-)
@@ -2533,13 +2533,13 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'computer science',
     extraTuitionFees: '1000',
     currency: 'egp',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments',
@@ -2548,10 +2548,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index departments 📌
@@ -2615,7 +2615,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments',
@@ -2623,10 +2623,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show department 📌
@@ -2687,7 +2687,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments/6430596c112031c1dbfc3fd8',
@@ -2695,10 +2695,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update department 📌
@@ -2743,13 +2743,13 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Information System',
     extraTuitionFees: '100000',
     currency: 'EUR',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments/643059a6112031c1dbfc3fed',
@@ -2758,10 +2758,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete department 📌
@@ -2788,7 +2788,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments/64305ac8ee3e783bbc680624',
@@ -2796,10 +2796,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### Student ⭐
@@ -2862,14 +2862,14 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Mohamed Yasser',
     password: 'passCodee75&',
     username: 'mohamedyasser459f',
     academicId: '9879873833',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments/6430596c112031c1dbfc3fd8/students',
@@ -2878,10 +2878,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index students 📌
@@ -2938,7 +2938,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments/6430596c112031c1dbfc3fd8/students',
@@ -2946,10 +2946,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show student 📌
@@ -3004,7 +3004,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments/6430596c112031c1dbfc3fd8/students/643061a4ee3e783bbc680640',
@@ -3012,10 +3012,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update student 📌
@@ -3056,12 +3056,12 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: '999',
     academicId: '999999999',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments/6430596c112031c1dbfc3fd8/students/6430629f9cd224306d04b332',
@@ -3070,10 +3070,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete student 📌
@@ -3099,7 +3099,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments/6430596c112031c1dbfc3fd8/students/6430629f9cd224306d04b332',
@@ -3107,10 +3107,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### QUICK ACCESS ⭐
@@ -3144,7 +3144,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/643052073eea93f118839c3e/levels/642ee7f789a92ceeba6b7a4f',
@@ -3152,10 +3152,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### ACCESS PERMISSOIN ⭐
@@ -3204,7 +3204,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/643052073eea93f118839c3e',
@@ -3212,10 +3212,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update admin 📌
@@ -3254,12 +3254,12 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMDUyMDczZWVhOTNmMTE4ODM5YzNlIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY4MDg4ODM1NywiZXhwIjoxNjgzNDgwMzU3fQ.q2ECpclT0R9BoCeVq4korwQxVpS0D3E5AvFeH2y7kYo',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Mohamed Yasser',
     email: 'unista-ali@gmail.com',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/admin/643052073eea93f118839c3e',
@@ -3268,10 +3268,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 #### PROFESSOR 👨‍🏫
@@ -3323,7 +3323,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/6430c7854e29a1ff8375d1e7',
@@ -3331,10 +3331,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update professor 📌
@@ -3373,12 +3373,12 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Dr. Mohamed Yasser',
     academicId: '4354353453453',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/6430c7854e29a1ff8375d1e7',
@@ -3387,10 +3387,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### COURSE ⭐
@@ -3430,13 +3430,13 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'machine learning',
     code: 'CS45',
     semester: 'first',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments/6430596c112031c1dbfc3fd8/courses',
@@ -3445,10 +3445,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete course 📌
@@ -3473,7 +3473,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments/6430596c112031c1dbfc3fd8/courses/6430cc574e29a1ff8375d202',
@@ -3481,10 +3481,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index courses 📌
@@ -3535,15 +3535,15 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch('http://localhost:3000/api/v1/professor/courses', {
     method: 'GET',
     headers: headersList,
-  })
+  });
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show course 📌
@@ -3608,7 +3608,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca',
@@ -3616,10 +3616,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update course 📌
@@ -3660,13 +3660,13 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'machine learning',
     code: 'CS45',
     semester: 'first',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca',
@@ -3675,10 +3675,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### EBOOK ⭐
@@ -3728,11 +3728,11 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Machine Learning Course Ebook',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/ebook',
@@ -3741,10 +3741,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show ebook 📌
@@ -3786,7 +3786,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/ebook/6430d28595394133234b0ca5',
@@ -3794,10 +3794,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update ebook 📌
@@ -3845,11 +3845,11 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Machine Learning Course Ebook Updated',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/ebook/6430d28595394133234b0ca5',
@@ -3858,10 +3858,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete ebook 📌
@@ -3887,7 +3887,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/ebook/6430d28595394133234b0ca5',
@@ -3895,10 +3895,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### ASSISTANT ⭐
@@ -3953,14 +3953,14 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Mohamed Yasser',
     academicId: '9887593780045',
     username: 'mohamed-user-09',
     password: 'passCode090',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/courses/6430ce43c3ca49b01012f8ca/assistants',
@@ -3969,10 +3969,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Attach assistant 📌
@@ -4015,7 +4015,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/courses/6430e37e95394133234b0cdf/assistants/6430e04795394133234b0ccd/attach',
@@ -4023,10 +4023,10 @@ _API-Endpoint Routes_: **157**
       method: 'POST',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update assistant 📌
@@ -4067,12 +4067,12 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Mohamed Yasser',
     academicId: '9887593780045',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/courses/6430ce43c3ca49b01012f8ca/assistants/6430e04795394133234b0ccd',
@@ -4081,10 +4081,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show assistant 📌
@@ -4137,7 +4137,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/courses/6430ce43c3ca49b01012f8ca/assistants/6430e04795394133234b0ccd',
@@ -4145,10 +4145,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete assistant 📌
@@ -4174,7 +4174,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/courses/6430ce43c3ca49b01012f8ca/assistants/6430e04795394133234b0ccd',
@@ -4182,10 +4182,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index assistants by course 📌
@@ -4234,7 +4234,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/courses/6430ce43c3ca49b01012f8ca/assistants',
@@ -4242,10 +4242,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index assistants by collage 📌
@@ -4288,7 +4288,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/assistants',
@@ -4296,10 +4296,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### LECTURE ⭐
@@ -4340,12 +4340,12 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Lecture 01',
     number: 1,
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures',
@@ -4354,10 +4354,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index lectures 📌
@@ -4399,7 +4399,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures',
@@ -4407,10 +4407,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show lecture 📌
@@ -4453,7 +4453,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/6431e66759a6e5eec1297319',
@@ -4461,10 +4461,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update lecture 📌
@@ -4503,12 +4503,12 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Lecture 03',
     number: 3,
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/6431e66759a6e5eec1297319',
@@ -4517,10 +4517,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete lecture 📌
@@ -4546,7 +4546,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/6431e66759a6e5eec1297319',
@@ -4554,10 +4554,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 - `POST - api/v1/professor/courses/:id/lectures/:id/resources` - Create [Details](#create-lecture-resource-)
@@ -4624,12 +4624,12 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'lecture 01 - resource',
     type: 'png',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/64322cf88becbaa1fe44e152/resources',
@@ -4638,10 +4638,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index lecture resources 📌
@@ -4676,7 +4676,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/64322cf88becbaa1fe44e152/resources',
@@ -4684,10 +4684,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show lecture resource 📌
@@ -4733,7 +4733,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/64322cf88becbaa1fe44e152/resources/64322db139cfdf68bb8fe285',
@@ -4741,10 +4741,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update lecture resource 📌
@@ -4798,11 +4798,11 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'new resource name',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/64322cf88becbaa1fe44e152/resources/64322db139cfdf68bb8fe285',
@@ -4811,10 +4811,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete lecture resource 📌
@@ -4840,7 +4840,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/64322cf88becbaa1fe44e152/resources/64322db139cfdf68bb8fe285',
@@ -4848,10 +4848,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### QUICK Index ⭐
@@ -4886,7 +4886,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels',
@@ -4894,10 +4894,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index programs professor 📌
@@ -4930,7 +4930,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs',
@@ -4938,10 +4938,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index departments professor 📌
@@ -4974,7 +4974,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/universities/642deaa976e91123782b7f16/collages/642e3cb699182e5e2d14ec59/levels/642ee7f789a92ceeba6b7a4f/programs/643052a83eea93f118839c46/departments',
@@ -4982,10 +4982,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### ATTENDANCE ⭐
@@ -5046,14 +5046,14 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     distanceInMeters: 100,
     durationInMinutes: 2,
     lat: '30.9977',
     lng: '29.7432',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/64322cf88becbaa1fe44e152/attendance',
@@ -5062,10 +5062,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show attendance 📌
@@ -5110,7 +5110,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/6432d85e19c58a344497f4b4/attendance/6432d88c19c58a344497f4ba',
@@ -5118,10 +5118,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index attendance students 📌
@@ -5150,7 +5150,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/6432d85e19c58a344497f4b4/attendance/6432d88c19c58a344497f4ba/students',
@@ -5158,10 +5158,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete attendance student 📌
@@ -5187,7 +5187,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/lectures/6432d85e19c58a344497f4b4/attendance/6432d88c19c58a344497f4ba/students/6432d85e19c58a344497f4b4',
@@ -5195,10 +5195,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### COURSE ASSIGNMENT ⭐
@@ -5240,14 +5240,14 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     title: 'Python CGI',
     contentText:
       'In this assignment you should create a full python server side application and apply all CGI concepts we have learned in the lecture and section',
     dueToDays: 7,
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/assignments',
@@ -5256,10 +5256,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index course assignments 📌
@@ -5303,7 +5303,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/assignments',
@@ -5311,10 +5311,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show course assignment 📌
@@ -5358,7 +5358,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/assignments/6432dd2ddde93cf76c5dadc8',
@@ -5366,10 +5366,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update course assignment 📌
@@ -5418,13 +5418,13 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     title: 'New title',
     contentText: 'New content text',
     dueToDays: 10,
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/assignments/6432dd2ddde93cf76c5dadc8',
@@ -5433,10 +5433,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete course assignment 📌
@@ -5462,7 +5462,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/assignments/6432dd2ddde93cf76c5dadc8',
@@ -5470,10 +5470,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 - `GET - api/v1/professor/courses/:id/assignments/:id/submissions` - Index [Details](#index-course-assignment-submissions-)
@@ -5507,7 +5507,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/assignments/6432e0d4dde93cf76c5dade9/submissions',
@@ -5515,10 +5515,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show course assignment submission 📌
@@ -5555,7 +5555,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430ce43c3ca49b01012f8ca/assignments/6432e0d4dde93cf76c5dade9/submissions/6432e0d4dde93cf76c5dade9',
@@ -5563,10 +5563,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### EXAM ⭐
@@ -5633,7 +5633,7 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Exam 01',
@@ -5643,7 +5643,7 @@ _API-Endpoint Routes_: **157**
     startAtHour: '12',
     startAtMinute: '30',
     durationInMinutes: '20',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams',
@@ -5652,10 +5652,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index exams 📌
@@ -5702,7 +5702,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams',
@@ -5710,10 +5710,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show exam 📌
@@ -5765,7 +5765,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6432e33bdde93cf76c5dae02',
@@ -5773,10 +5773,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update exam 📌
@@ -5824,7 +5824,7 @@ _API-Endpoint Routes_: **157**
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'exam 99',
@@ -5834,7 +5834,7 @@ _API-Endpoint Routes_: **157**
     startAtHour: '15',
     startAtMinute: '10',
     durationInMinutes: '20',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6432e33bdde93cf76c5dae02',
@@ -5843,10 +5843,10 @@ _API-Endpoint Routes_: **157**
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete exam 📌
@@ -5872,7 +5872,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6432e33bdde93cf76c5dae02',
@@ -5880,10 +5880,10 @@ _API-Endpoint Routes_: **157**
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Start now exam 📌
@@ -5914,7 +5914,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6432e59cdde93cf76c5dae17/start-now',
@@ -5922,10 +5922,10 @@ _API-Endpoint Routes_: **157**
       method: 'PATCH',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### EXAM SUBMISSIONS ⭐
@@ -5960,7 +5960,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6432e59cdde93cf76c5dae17/submissions',
@@ -5968,10 +5968,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 - `GET - api/v1/professor/courses/:id/exams/:id/enrollments` - Index [Details](#index-exam-enrollments-)
@@ -6008,7 +6008,7 @@ _API-Endpoint Routes_: **157**
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6432e59cdde93cf76c5dae17/enrollments',
@@ -6016,10 +6016,10 @@ _API-Endpoint Routes_: **157**
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### EXAM QUESTIONS ( Text and/or Image or both ) ⭐
@@ -6091,7 +6091,7 @@ let headersList = {
   Authorization:
     'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
   'Content-Type': 'application/json',
-}
+};
 
 let bodyContent = JSON.stringify({
   contentText: 'Question 2',
@@ -6099,7 +6099,7 @@ let bodyContent = JSON.stringify({
   score: '7',
   answersArray: ['answer 1', 'answer 2', 'answer 3'],
   correctAnswerIndex: '1',
-})
+});
 
 let response = await fetch(
   'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6433047d101ff077ea746339/questions',
@@ -6108,10 +6108,10 @@ let response = await fetch(
     body: bodyContent,
     headers: headersList,
   }
-)
+);
 
-let data = await response.text()
-console.log(data)
+let data = await response.text();
+console.log(data);
 ```
 
 ###### Index exam questions 📌
@@ -6146,7 +6146,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6433047d101ff077ea746339/questions',
@@ -6154,10 +6154,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show exam question 📌
@@ -6205,7 +6205,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6433047d101ff077ea746339/questions/64330490101ff077ea746340',
@@ -6213,10 +6213,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update exam question 📌
@@ -6257,13 +6257,13 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     contentText: 'this is a question!!',
     score: '5',
     correctAnswerId: '64330490101ff077ea746341',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6433047d101ff077ea746339/questions/64330490101ff077ea746340',
@@ -6272,10 +6272,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete exam question 📌
@@ -6301,7 +6301,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6433047d101ff077ea746339/questions/64330490101ff077ea746340',
@@ -6309,10 +6309,10 @@ console.log(data)
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 - `PATCH - api/v1/professor/courses/:id/exams/:id/questions/:id/answers/:id` - Update [Details](#update-exam-question-answer-)
@@ -6353,11 +6353,11 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGM3ODU0ZTI5YTFmZjgzNzVkMWU3Iiwicm9sZSI6InByb2Zlc3NvciJ9LCJpYXQiOjE2ODA5MTg0MjgsImV4cCI6MTY4MzUxMDQyOH0.tsqXjcQK_OSHtX8Q9cM__7Kcj6CLCMm2u2hkp3qoMEU',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     contentText: 'new answer',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/professor/courses/6430e37e95394133234b0cdf/exams/6433047d101ff077ea746339/questions/6433086febda70cf0481c976/answers/6433086febda70cf0481c977',
@@ -6366,10 +6366,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 #### ASSISTANT 👨‍🏫
@@ -6418,7 +6418,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/6430ed28e0848ccfef40807a',
@@ -6426,10 +6426,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update assistant 📌
@@ -6468,12 +6468,12 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'my new name',
     academicId: '878978798978',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/6430ed28e0848ccfef40807a',
@@ -6482,10 +6482,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 - `GET - api/v1/assistant/courses` - Index [Details](#index-courses-assistant-)
@@ -6527,15 +6527,15 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch('http://localhost:3000/api/v1/assistant/courses', {
     method: 'GET',
     headers: headersList,
-  })
+  });
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show course assistant 📌
@@ -6606,7 +6606,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca',
@@ -6614,10 +6614,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### SECTION ⭐
@@ -6658,12 +6658,12 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'Section 02',
     number: 2,
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections',
@@ -6672,10 +6672,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index sections assistant 📌
@@ -6729,7 +6729,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections',
@@ -6737,10 +6737,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show section assistant 📌
@@ -6783,7 +6783,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6',
@@ -6791,10 +6791,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update section assistant 📌
@@ -6844,12 +6844,12 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'New section name',
     number: 6,
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6',
@@ -6858,10 +6858,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete section assistant 📌
@@ -6904,7 +6904,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6',
@@ -6912,10 +6912,10 @@ console.log(data)
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 - `POST - api/v1/assistant/courses/:id/sections/:id/attendance` - Create [Details](#create-attendance-assistant-)
@@ -6979,14 +6979,14 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     distanceInMeters: 100,
     durationInMinutes: 60,
     lat: '31.205753',
     lng: '29.924526',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/attendance',
@@ -6995,10 +6995,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show attendance assistant 📌
@@ -7046,7 +7046,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/attendance/64338568efee0439e703eecf',
@@ -7054,10 +7054,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index attendance assistant students 📌
@@ -7085,7 +7085,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/attendance/64338568efee0439e703eecf/students',
@@ -7093,10 +7093,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete attendance assistant student 📌
@@ -7122,7 +7122,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/attendance/64338568efee0439e703eecf/students/6430ce43c3ca49b01012f8ca',
@@ -7130,10 +7130,10 @@ console.log(data)
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 - `POST - api/v1/assistant/courses/:id/sections/:id/assignments` - Create [Details](#create-section-assignment-assistant-)
@@ -7192,14 +7192,14 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     title: 'this is new assignment for the section',
     contentText:
       'in this assignment you should create static website using htm, css, js',
     dueToDays: 5,
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/assignments',
@@ -7208,10 +7208,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index section assignments assistant 📌
@@ -7256,7 +7256,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/assignments',
@@ -7264,10 +7264,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show section assignment assistant 📌
@@ -7317,7 +7317,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/assignments/64338862b26563cf63a1934d',
@@ -7325,10 +7325,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update section assignment assistant 📌
@@ -7380,13 +7380,13 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     title: 'section assignment new title',
     contentText: 'this is updated content text',
     dueToDays: 9,
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/assignments/64338862b26563cf63a1934d',
@@ -7395,10 +7395,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete section assignment assistant 📌
@@ -7424,7 +7424,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/assignments/64338862b26563cf63a1934d',
@@ -7432,10 +7432,10 @@ console.log(data)
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### SECTION RESOURCES ⭐
@@ -7498,12 +7498,12 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'section resource for the whiteboard',
     type: 'png',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/resources',
@@ -7512,10 +7512,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Index section resources assistant 📌
@@ -7550,7 +7550,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/64199f7356f349d3513ab2b9/sections/641b0a475fc1040d89eb8a04/resources',
@@ -7558,10 +7558,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show section resource assistant 📌
@@ -7607,7 +7607,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/resources/64338b889d30e909adbe568a',
@@ -7615,10 +7615,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update section resource assistant 📌
@@ -7670,11 +7670,11 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     name: 'new resource name',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/resources/64338b889d30e909adbe568a',
@@ -7683,10 +7683,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Delete section resource assistant 📌
@@ -7712,7 +7712,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/resources/64338b889d30e909adbe568a',
@@ -7720,10 +7720,10 @@ console.log(data)
       method: 'DELETE',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### ASSIGNMENT SUBMISSIONS ⭐
@@ -7754,7 +7754,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/assignments/64338e5c9d30e909adbe56ab/submissions',
@@ -7762,10 +7762,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show section assignment submission assistant 📌
@@ -7819,7 +7819,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMGVkMjhlMDg0OGNjZmVmNDA4MDdhIiwicm9sZSI6ImFzc2lzdGFudCJ9LCJpYXQiOjE2ODEwNzM5MzYsImV4cCI6MTY4MzY2NTkzNn0.OLgmho2JmORrkQ7Ct45E9NmUoDWFjd021fxnAsIIpyk',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/assistant/courses/6430ce43c3ca49b01012f8ca/sections/64333b450ea788a84c9579e6/assignments/64338e5c9d30e909adbe56ab/submissions/6430ce43c3ca49b01012f8ca',
@@ -7827,10 +7827,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 #### STUDENT 👨‍🎓
@@ -7893,7 +7893,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/64339e899d30e909adbe56cc',
@@ -7901,10 +7901,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### COURSE ⭐
@@ -7955,15 +7955,15 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch('http://localhost:3000/api/v1/student/courses', {
     method: 'GET',
     headers: headersList,
-  })
+  });
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show course student 📌
@@ -8019,7 +8019,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430ce43c3ca49b01012f8ca',
@@ -8027,10 +8027,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Enroll course student 📌
@@ -8056,7 +8056,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430ce43c3ca49b01012f8ca/enroll',
@@ -8064,10 +8064,10 @@ console.log(data)
       method: 'POST',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### COURSE EXAM ⭐
@@ -8123,9 +8123,9 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
     'Content-Type': 'application/json',
-  }
+  };
 
-  let bodyContent = JSON.stringify({})
+  let bodyContent = JSON.stringify({});
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/exams',
@@ -8134,10 +8134,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Enroll course exam student 📌
@@ -8212,7 +8212,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzNDllMWI3MDVhMTRjMjdhYWU1MTI3Iiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTY5OTYxLCJleHAiOjE2ODM3NjE5NjF9.BwcErknbAN7_5RbJ0tqNjFehR-qCIPrI0lRr9xqZPCE',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/exams/64349c56162ca94a690b312e/enroll',
@@ -8220,10 +8220,10 @@ console.log(data)
       method: 'POST',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Submit course exam student 📌
@@ -8261,14 +8261,14 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzNDllMWI3MDVhMTRjMjdhYWU1MTI3Iiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTY5OTYxLCJleHAiOjE2ODM3NjE5NjF9.BwcErknbAN7_5RbJ0tqNjFehR-qCIPrI0lRr9xqZPCE',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     questionsWithAnswers: [
       "{question: '64349ca2162ca94a690b3140', answer: '64349ca2162ca94a690b3143'}",
       "{question: '64349cb4162ca94a690b314e', answer: '64349cb4162ca94a690b314f'}",
     ],
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/exams/64349c56162ca94a690b312e/submit',
@@ -8277,10 +8277,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### COURSE ASSIGNMENT ⭐
@@ -8315,7 +8315,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assignments',
@@ -8323,10 +8323,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show course assignments student 📌
@@ -8367,7 +8367,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assignments/6434a25263372d0aa8ecba3f',
@@ -8375,10 +8375,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Submit course assignment student 📌
@@ -8426,12 +8426,12 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     note: 'this is student note',
     fileType: 'png',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assignments/6434a25263372d0aa8ecba3f/submit',
@@ -8440,10 +8440,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 - `GET - api/v1/student/courses/:id/assistants` - Index [Details](#index-course-assistants-student-)
@@ -8484,7 +8484,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assistants',
@@ -8492,10 +8492,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### SECTION ⭐
@@ -8534,7 +8534,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assistants/6434a64263372d0aa8ecba8f/sections',
@@ -8542,10 +8542,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show section student 📌
@@ -8588,7 +8588,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assistants/6434a64263372d0aa8ecba8f/sections/6434a6a363372d0aa8ecbaa5',
@@ -8596,10 +8596,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### SECTION RESOURCES ⭐
@@ -8641,7 +8641,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assistants/6434a64263372d0aa8ecba8f/sections/6434a6a363372d0aa8ecbaa5/resources',
@@ -8649,10 +8649,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### SECTION ASSIGNMENT ⭐
@@ -8687,7 +8687,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assistants/6434a64263372d0aa8ecba8f/sections/6434a6a363372d0aa8ecbaa5/assignments',
@@ -8695,10 +8695,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show section assignment student 📌
@@ -8743,7 +8743,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assistants/6434a64263372d0aa8ecba8f/sections/6434a6a363372d0aa8ecbaa5/assignments/6434ada7e7b70ce6c7e5d3cd',
@@ -8751,10 +8751,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Submit section assignment student 📌
@@ -8801,12 +8801,12 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     note: 'this is student note',
     fileType: 'png',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assistants/6434a64263372d0aa8ecba8f/sections/6434a6a363372d0aa8ecbaa5/assignments/6434ada7e7b70ce6c7e5d3cd/submit',
@@ -8815,10 +8815,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### SECTION ATTENDANCE ⭐
@@ -8851,7 +8851,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assistants/6434a64263372d0aa8ecba8f/sections/6434a6a363372d0aa8ecbaa5/attendance/6434b4e9b8a4dc5e28d1c321',
@@ -8859,10 +8859,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Attend section attendance student 📌
@@ -8894,13 +8894,13 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzNGI2ZWNjY2Q3YWIyZTUwOGIyYTliIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTc2MzE5LCJleHAiOjE2ODM3NjgzMTl9.7ezCeW-eVpO5yepCy6UH41vHQmF7Kvux8HybKeg-T_w',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     randomAccessKey: 'en0JNha0iU',
     lat: '31.205753',
     lng: '29.924526',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/assistants/6434a64263372d0aa8ecba8f/sections/6434a6a363372d0aa8ecbaa5/attendance/6434b4e9b8a4dc5e28d1c321/attend',
@@ -8909,10 +8909,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### LECTURE ⭐
@@ -8948,7 +8948,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/lectures',
@@ -8956,10 +8956,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Show lecture student 📌
@@ -8994,7 +8994,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/lectures/6434b916ccd7ab2e508b2ac3',
@@ -9002,10 +9002,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### LECTURE RESOURCES ⭐
@@ -9047,7 +9047,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/lectures/6434b916ccd7ab2e508b2ac3/resources',
@@ -9055,10 +9055,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 - `GET - api/v1/student/courses/:id/lectures/:id/attendance/:id` - Show [Details](#show-lecture-attendance-student-)
@@ -9094,7 +9094,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/lectures/6434b916ccd7ab2e508b2ac3/attendance/6434c0f21c684c5985ccaf70',
@@ -9102,10 +9102,10 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Attend lecture attendance student 📌
@@ -9137,13 +9137,13 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     randomAccessKey: 'lY4RWSzvxD',
     lat: '30.9977',
     lng: '29.7432',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/student/courses/6430e37e95394133234b0cdf/lectures/6434b916ccd7ab2e508b2ac3/attendance/6434c0f21c684c5985ccaf70/attend',
@@ -9152,10 +9152,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### CONTACTS ⭐
@@ -9203,7 +9203,7 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     email: 'hi@gmail.com',
@@ -9214,7 +9214,7 @@ console.log(data)
     whatsappCode: '20',
     WhatsappNumber: '1224440417',
     telegramUsername: 'iammo26',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/contacts/64339e899d30e909adbe56ca',
@@ -9223,10 +9223,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Update contact 📌
@@ -9284,7 +9284,7 @@ console.log(data)
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjQzMzllODk5ZDMwZTkwOWFkYmU1NmNjIiwicm9sZSI6InN0dWRlbnQifSwiaWF0IjoxNjgxMTA0NzA0LCJleHAiOjE2ODM2OTY3MDR9.ov6EA3_jla0KlwXgRnx1LOKUfapQ6qbVqgFeSqGvZ2Q',
     'Content-Type': 'application/json',
-  }
+  };
 
   let bodyContent = JSON.stringify({
     email: 'hi@gmail.com',
@@ -9295,7 +9295,7 @@ console.log(data)
     whatsappCode: '20',
     WhatsappNumber: '1224440417',
     telegramUsername: 'iammo26',
-  })
+  });
 
   let response = await fetch(
     'http://localhost:3000/api/v1/contacts/64339e899d30e909adbe56ca',
@@ -9304,10 +9304,10 @@ console.log(data)
       body: bodyContent,
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ##### STORAGE ⭐
@@ -9349,7 +9349,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjNlN2M0M2EwZTc4YmVkNzdiMGNhMzg1Iiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2Nzg5NTkzMjAsImV4cCI6MTY4MTU1MTMyMH0.kqKSNP7bBAyo2KtstKA7ESMqCmh0_4Csm6sdXy9k3-o',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/storage/6434be45b5d96421078c210a',
@@ -9357,10 +9357,10 @@ console.log(data)
       method: 'POST',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
 
 ###### Access storage 📌
@@ -9398,7 +9398,7 @@ console.log(data)
     Accept: '*/*',
     Authorization:
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiNjNlN2M0M2EwZTc4YmVkNzdiMGNhMzg1Iiwicm9sZSI6Im1hc3RlciJ9LCJpYXQiOjE2Nzg5NTkzMjAsImV4cCI6MTY4MTU1MTMyMH0.kqKSNP7bBAyo2KtstKA7ESMqCmh0_4Csm6sdXy9k3-o',
-  }
+  };
 
   let response = await fetch(
     'http://localhost:3000/api/v1/storage/6434aeec91da347928a86084',
@@ -9406,8 +9406,8 @@ console.log(data)
       method: 'GET',
       headers: headersList,
     }
-  )
+  );
 
-  let data = await response.text()
-  console.log(data)
+  let data = await response.text();
+  console.log(data);
   ```
