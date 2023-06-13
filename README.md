@@ -1,13 +1,11 @@
 ## API Endpoints
 
-## Intro
+## Intro 📖
 
-Hello everybody
+Hello everybody 
 I'm Mohamed a computer science studnet and I would like to share with you my final year graduation project which is a complete Learning Management system for universities with the basic functionallities required nowadays for online learning.
 
 I have built everything from A to Z, ERD design, database, backend APIs, and the basic UI prototype and implement that UI desing, testing suits, CI/CD pipline.
-
-Let's have a quik overview about unista by exploring the ERD design.
 
 ### FILE SYSTEM IFRASTRUCTURE (AWS S3 PRESIGNED URL) 📁
 
