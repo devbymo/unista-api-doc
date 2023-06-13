@@ -1,5 +1,14 @@
 ## API Endpoints
 
+## Intro
+
+Hello everybody
+I'm Mohamed a computer science studnet and I would like to share with you my final year graduation project which is a complete Learning Management system for universities with the basic functionallities required nowadays for online learning.
+
+I have built everything from A to Z, ERD design, database, backend APIs, and the basic UI prototype and implement that UI desing, testing suits, CI/CD pipline.
+
+Let's have a quik overview about unista by exploring the ERD design.
+
 ### FILE SYSTEM IFRASTRUCTURE (AWS S3 PRESIGNED URL) 📁
 
 [Check my blog about different file upload solutions](https://iammo69.web.app/file-upload-solutions.html)
@@ -7,98 +16,171 @@
 
 ### SECURITY 🔐
 
-- All routes are protected by `JWT` authentication.
-- All routes are protected by `ACL` authorization.
-- All routes are protected by `CSRF` protection.
-- All routes are protected by `Rate Limiting` protection. (50 requests per minute)
-- All routes are protected by `DDOS` protection.
+- `JWT` authentication.
+- `ACL` authorization.
+- `Rate Limiting` protection. (Prevent brute force attacks)
 - All files are accessible only by `Presigned URL` (AWS S3) which will be expired after **_n_** minutes.
-- All routes are protected by `CORS` protection.
-- All routes are protected by `Helmet` protection. (Headers security)
-- Passwords are hashed using in un-reversible `bcrypt` algorithm.
-- Strict endpoint validation system (IDs, etc)
+- Define `CORS` policy to allow only specific domains.
+- Header security using `Helmet` package.
+- Passwords are hashed using in un-reversible algorithm `bcrypt`.
+- Strict endpoint validation system (IDs, etc).
 
 ### API VERSIONING 📦
 
 - All routes are versioned by default `GET - api/v1/courses`
 
-### TECH STACK 📚
+### TECH STACK (main) 📚
 
 - NodeJS
 - ExpressJS
 - MongoDB
 - Mongoose
 - AWS S3
-- JWT
-- bcrypt
 
 ### DEPLOYMENT STACK (CI/CD) 🚀
 
-- Docker Compose
+- Docker 
+- Kubernetes (AWS EKS) 
 - AWS EC2
-- Kubernetes (K8s)
-- AWS EKS
 - Travis CI
-- Nginx (Reverse Proxy)
+- Nginx 
+
+
+### Code Features 📌
+- [x] CRUD (Create, Read, Update, Delete) for all resources using RESTful API design
+- [x] Index Pagination - Search - Sort - Select - Filter
+- [x] API Versioning (v1)
+- [x] Best Practices & Clean Code (MVC, SOLID, DRY, KISS)
+- [x] API Documentation
+- [x] Scalable System (You can add as much features as you want without breaking the system)
+- [x] Error Handling System (Genaric error handler middleware with Correct HTTP Status Code & Error message)
+
+
+### Unista Features 📌
+
+- [x] Authentication login using 3 different ways (credentials, scan QR code, upload QR code)
+- [x] Role based system (Master, Admin, Professor, Assistant, Student)
+- [x] Smart attendace system (QR Code)
+- [x] Accurate Geolocation system (GPS) for attendance
+- [x] Secure Exam system (No way to cheat)
+- [x] Auto genrate exam questions (MCQ, True/False, Fill in the blanks) based on uploaded course e-book.
+- [x] Assignments system
+- [x] Fast - secure - scalable file system (AWS S3)
+- [x] Horizontal Scaling (Kubernetes add pods(EC2) to scale horizontally if CPU usage is high)
+- [x] MORE TO COME...
 
 ### TODOs 📝
 
 - [ ] Add `Redis` for caching
 - [ ] Add `Jest` for testing (unit, integration)
-- [ ] Add `TypeScript` for type checking
 - [ ] Add `Notification` system
 - [ ] Add `Emailing` system
 - [ ] Enhance `NodeJS` performance [My blog about node clustring](https://iammo69.web.app/enhance-node-performance.html)
 - [ ] Add `Chat` system
-- [ ] Add `Stripe Payment` system
 - [ ] Add `Video conferencing` system
 - [ ] Add `Student activities` system
 - [ ] Add `Student to student learning` system
 - [ ] Add `Vote` system
-
-### Features 📌
-
-- [x] Authentication (Login using QR Code)
-- [x] Authorization (ACL)
-- [x] Strict endpoint validation system (IDs, etc)
-- [x] Role based system (Master, Admin, Professor, Assistant, Student)
-- [x] CRUD (Create, Read, Update, Delete) for all resources
-- [x] Strict endpoint validation system (IDs, etc)
-- [x] Smart attendace system (QR Code)
-- [x] Accurate Geolocation system (GPS) for attendance
-- [x] Exam system
-- [x] File upload system (AWS S3)
-- [x] Assignments system
-- [x] CRUD (Create, Read, Update, Delete) RESTful API
-- [x] MVC Architecture
-- [x] Upload files (Image, PDF, Word, Excel, PPT, etc) to AWS S3
-- [x] Download files (Image, PDF, Word, Excel, PPT, etc) from AWS S3
-- [x] Pagination
-- [x] Rate Limiting
-- [x] DDOS Protection
-- [x] CORS Protection
-- [x] Helmet Protection
-- [x] CSRF Protection
-- [x] Containerization (Docker)
-- [x] CI/CD Pipeline (Travis CI)
-- [x] Deployment (AWS EC2, Kubernetes, AWS EKS)
-- [x] Reverse Proxy (Nginx)
-- [x] API Versioning
-- [x] Clean Code (ESLint, Prettier)
-- [x] Best Practices (MVC, SOLID, DRY, KISS, YAGNI)
-- [x] Password Hashing (bcrypt)
-- [x] API Documentation
-- [x] API Testing (Postman)
-- [x] Horizontal Scaling (Kubernetes add pods(EC2) to scale horizontally)
-- [x] Scalable System (You can add as much features as you want without breaking the system)
-- [x] Error Handling System (Genaric error handler middleware with Correct HTTP Status Code & Error message)
-- [x] MORE TO COME...
-
+- [ ] Add `DOSS` protection
 ### STATISTICS 📈
 
 _API-Endpoint Routes_: **157**
 
-### API DOCUMENTATION 📖
+
+### Environment Variables 🌐
+
+```bash
+# ENV info
+NODE_ENV="dev"
+# PORT info
+PORT_DEV="xxxxxxx"
+PORT_PROD="xxxxxxx"
+PORT_TEST="xxxxxxx"
+# DB connection info
+DB_USER_DEV="xxxxxxx"
+DB_USER_PROD="xxxxxxx"
+DB_USER_TEST="xxxxxxx"
+DB_PASSWORD_DEV="xxxxxxx"
+DB_PASSWORD_PROD="xxxxxxx"
+DB_PASSWORD_TEST="xxxxxxx"
+DB_HOST_DEV="xxxxxxx"
+DB_HOST_PROD="xxxxxxx"
+DB_HOST_TEST="xxxxxxx"
+# CORS config
+CORS_ORIGIN_DEV="xxxxxxx"
+CORS_ORIGIN_PROD="xxxxxxx"
+CORS_ORIGIN_TEST="xxxxxxx"
+# REQ limit
+REQUEST_LIMIT_TIMEOUT_DEV="xxxxxxx"
+REQUEST_LIMIT_TIMEOUT_PROD="xxxxxxx"
+REQUEST_LIMIT_TIMEOUT_TEST="xxxxxxx"
+REQUEST_LIMIT_MAX_DEV="xxxxxxx"
+REQUEST_LIMIT_MAX_PROD="xxxxxxx"
+REQUEST_LIMIT_MAX_TEST="xxxxxxx"
+# BCRYPT config
+BCRYPT_SALT_ROUNDS_DEV="xxxxxxx"
+BCRYPT_SALT_ROUNDS_PROD="xxxxxxx"
+BCRYPT_SALT_ROUNDS_TEST="xxxxxxx"
+BCRYPT_PEPPER_DEV="xxxxxxx"
+BCRYPT_PEPPER_PROD="xxxxxxx"
+BCRYPT_PEPPER_TEST="xxxxxxx"
+# JWT config
+JWT_SECRET_DEV="xxxxxxx"
+JWT_SECRET_PROD="xxxxxxx"
+JWT_SECRET_TEST="xxxxxxx"
+JWT_EXPIRES_IN_DEV="xxxxxxx"
+JWT_EXPIRES_IN_PROD="xxxxxxx"
+JWT_EXPIRES_IN_TEST="xxxxxxx"
+# URL
+URL_DEV="xxxxxxx"
+URL_TEST="xxxxxxx"
+URL_PROD="xxxxxxx"
+# SECRET KEYS
+MASTER_SECRET_KEY_DEV="xxxxxxx"
+MASTER_SECRET_KEY_TEST="xxxxxxx"
+MASTER_SECRET_KEY_PROD="xxxxxxx"
+# AWS
+AWS_ACCESS_KEY_ID_DEV="xxxxxxx"
+AWS_ACCESS_KEY_ID_TEST="xxxxxxx"
+AWS_ACCESS_KEY_ID_PROD="xxxxxxx"
+AWS_SECRET_ACCESS_KEY_DEV="xxxxxxx"
+AWS_SECRET_ACCESS_KEY_TEST="xxxxxxx"
+AWS_SECRET_ACCESS_KEY_PROD="xxxxxxx"
+AWS_REGION_DEV="xxxxxxx"
+AWS_REGION_TEST="xxxxxxx"
+AWS_REGION_PROD="xxxxxxx"
+AWS_BUCKET_NAME_DEV="xxxxxxx"
+AWS_BUCKET_NAME_TEST="xxxxxxx"
+AWS_BUCKET_NAME_PROD="xxxxxxx"
+AWS_EXPIRES_IN_MINUTES_DEV="xxxxxxx"
+AWS_EXPIRES_IN_MINUTES_TEST="xxxxxxx"
+AWS_EXPIRES_IN_MINUTES_PROD="xxxxxxx"
+RANDOM_CHARS_DEV="xxxxxxxxxxxxxxx"
+RANDOM_CHARS_LENGTH_DEV="xxxxxxx"
+RANDOM_CHARS_TEST="xxxxxxxxxxxxxxx"
+RANDOM_CHARS_LENGTH_TEST="xxxxxxx"
+RANDOM_CHARS_PROD="xxxxxxxxxxxxxxx"
+RANDOM_CHARS_LENGTH_PROD="xxxxxxx"
+API_ENDPOINT_DEV="xxxxxxx"
+API_ENDPOINT_TEST="xxxxxxx"
+API_ENDPOINT_PROD="xxxxxxx"
+API_TOKEN_DEV="xxxxxxx"
+API_TOKEN_TEST="xxxxxxx"
+API_TOKEN_PROD="xxxxxxx"
+```
+
+### Installation 📥
+
+```bash
+# Clone the repo
+git clone
+# Install dependencies
+npm install
+# Run the app
+npm start
+# Run the app in development mode
+npm run dev:fast
+```
 
 ### Success Response Format ✅
 
@@ -129,6 +211,7 @@ _API-Endpoint Routes_: **157**
 - All index routes are paginated by default, you can pass `page` and `limit` as query params to change the pagination.
   Example: `GET - api/v1/courses?page=2&limit=10`
 
+### API DOCUMENTATION 📖
 ### All Endpoints (overview) 📡
 
 #### Authentication 🔐
