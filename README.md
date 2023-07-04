@@ -2,21 +2,9 @@
 
 ### Intro 📌
 
-- Hello everybody, it's Mohamed here, a computer science student, I'm excited to share with you my final year graduation project which's called Unista. It's a complete Learning Management System for universities, powered with the essential functionalities required for online learning today.
+- 🎙🎓 Hello, It's Mohamed here, a computer science graduate. I'm excited to introduce my final year graduation project - Unista. Unista is a comprehensive Learning Management System for universities, designed for effective online learning. Its main goal is to simplify the study process and provide continuous availability for all users. Unista has 5 main roles: Master, Admin, Professor, Assistant, and Student.
 
-- I've built everything from scratch, including the ERD design, database, backend APIs, and a basic UI prototype. I've also implemented testing suites and a CI/CD pipeline to ensure its quality and efficiency.
-
-- We have 5 main user roles (Master, Admin, Professor, Assistant, Student) and each role has different permissions.
-
-    - The master is responsible for the initial setup of the system and creating professors and assistants for each college, as well as administrators for each level.
-
-    - Admins are responsible for creating courses, assigning professors to each course, and enrolling students from each department.
-
-    - The professor is responsible for creating assignments and exams, uploading course e-books, creating lectures and uploading lecture files, taking attendance, and performing various other tasks.
-
-    - The assistant is responsible for creating sections and assignments for each section, uploading section files, taking attendance, and performing various other tasks.
-
-    - The student can access and utilize all resources created by professors and assistants, such as assignments, exams, lectures, section files, attendance records, and various other materials and activities.
+- During development, I created the Entity-Relationship Diagram (ERD), established a robust database, developed backend APIs, and designed a functional UI prototype. I ensured reliability and efficiency by implementing comprehensive testing suites and a CI/CD pipeline.
 ### How we store and fetch files (AWS S3 PRESIGNED URL) 📁
 
 [Check my blog about different file upload solutions](https://iammo69.web.app/file-upload-solutions.html)
