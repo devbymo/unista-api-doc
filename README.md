@@ -1,7 +1,5 @@
 ## Unista API Documentation 📚
 
-### Intro 📌
-
 
 ### How we store and fetch files (AWS S3 PRESIGNED URL) 📁
 
