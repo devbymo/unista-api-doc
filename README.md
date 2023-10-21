@@ -2,9 +2,7 @@
 
 ### Intro 📌
 
-- 🎙🎓 Hello, It's Mohamed here, a computer science graduate. I'm excited to introduce my final year graduation project - Unista. Unista is a comprehensive Learning Management System for universities, designed for effective online learning. Its main goal is to simplify the study process and provide continuous availability for all users. Unista has 5 main roles: Master, Admin, Professor, Assistant, and Student.
 
-- During development, I created the Entity-Relationship Diagram (ERD), established a robust database, developed backend APIs, and designed a functional UI prototype. I ensured reliability and efficiency by implementing comprehensive testing suites and a CI/CD pipeline.
 ### How we store and fetch files (AWS S3 PRESIGNED URL) 📁
 
 [Check my blog about different file upload solutions](https://iammo69.web.app/file-upload-solutions.html)
