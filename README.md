@@ -4,6 +4,7 @@
 
 ### SECURITY 🔐
 
+- `Payload` Type, Size, Content Checker.
 - `JWT` authentication.
 - `ACL` authorization.
 - `Rate Limiting` protection. (Prevent brute force attacks)
