@@ -61,16 +61,12 @@
 ### TODOs 📝
 
 - [ ] Add `Redis` for caching
-- [ ] Add `Jest` for testing (unit, integration)
-- [ ] Add `Notification` system
-- [ ] Add `Emailing` system
 - [ ] Enhance `NodeJS` performance [My blog about node clustring](https://devbymo.web.app/enhance-node-performance.html)
 - [ ] Add `Chat` system
 - [ ] Add `Video conferencing` system
 - [ ] Add `Student activities` system
 - [ ] Add `Student to student learning` system
 - [ ] Add `Vote` system
-- [ ] Add `DOSS` protection
 
 ### How we store and fetch files (AWS S3 PRESIGNED URL) 📁
 
