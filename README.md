@@ -24,13 +24,13 @@
 - ExpressJS
 - MongoDB
 - Mongoose
-- AWS S3
 
 ### DEPLOYMENT STACK (CI/CD) 🚀
 
 - Docker 
 - Kubernetes (AWS EKS) 
 - AWS EC2
+- AWS S3
 - Travis CI
 - Nginx 
 
